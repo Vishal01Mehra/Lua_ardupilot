@@ -1,14 +1,14 @@
 # Retrieve specific Waypoint GPS coordinates 
 In this script:
 
-1. The target GPS coordinates are defined using TARGET_LATITUDE and TARGET_LONGITUDE.
+1. The desired waypoint index is defined using WAYPOINT_INDEX. Keep in mind that waypoint indices are zero-based.
 
-2. The servo channel and desired position are defined using SERVO_CHANNEL and SERVO_POSITION.
+2. The getWaypointData function uses the missionItems function to retrieve the list of mission items (waypoints). It then checks if the list exists and if the specified waypoint index is within the range of available waypoints.
 
-3. The checkTargetLocation function uses the sensorValues function to get the current GPS coordinates of the drone. It then calculates the distance between the current location and the target location using the gpsDistance function.
+3. If the waypoint data is available, the latitude and longitude of the specified waypoint are extracted from the waypoints list and logged using the logMessage function.
 
-4. If the distance is less than or equal to the defined threshold (5 meters in this case), the servo is moved to the desired position. Otherwise, the servo is moved to a neutral position.
+4. If the waypoint data is not available or the specified index is out of range, an appropriate log message is displayed.
 
-5. The timer is set up to call the checkTargetLocation function every 5 seconds to continuously monitor the drone's location.
+5. The getWaypointData function is called immediately after definition to retrieve and display the waypoint data.
 
-**Please ensure that you replace the placeholder values with your actual target GPS coordinates, servo channel, and desired servo position. Test the script in a controlled environment to ensure it behaves as expected in your UAV system.**
+**Replace the WAYPOINT_INDEX value with the desired waypoint index that you want to retrieve data for. Keep in mind that you need to have a mission loaded on your UAV before running the script. Test the script on a mission with waypoints to ensure it retrieves the correct data.**
