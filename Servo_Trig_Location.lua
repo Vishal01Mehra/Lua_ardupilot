@@ -6,7 +6,7 @@ TARGET_LONGITUDE = -71.987654 -- Replace with your desired longitude
 SERVO_CHANNEL = 6
 SERVO_POSITION = 1500  -- Replace with your desired servo position
 
--- Function to check if drone has reached the target location
+-- Function to check if the drone has reached the target location
 function checkTargetLocation()
     local gps = sensorValues("GPS")
     
