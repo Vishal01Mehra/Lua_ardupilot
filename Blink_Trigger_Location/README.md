@@ -1,9 +1,9 @@
 # Blinks the Light on a Specific location
 In this script:
 
-1.The target GPS coordinates are defined using TARGET_LATITUDE and TARGET_LONGITUDE.
+1. The target GPS coordinates are defined using TARGET_LATITUDE and TARGET_LONGITUDE.
 
-2.The LED channel for blinking is defined using LED_CHANNEL.
+2. The LED channel for blinking is defined using LED_CHANNEL.
 
 3. Blinking parameters are defined, including the blink duration (BLINK_DURATION) and the interval between blinks (BLINK_INTERVAL).
 
